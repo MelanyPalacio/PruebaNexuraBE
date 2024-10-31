@@ -1,6 +1,6 @@
 ## Description
 
-Prueba Nexura - CRUD EMPLEADOS. Desarrollado con React, TypeScript, Postman y Docker starter repository.
+Prueba Nexura - CRUD EMPLEADOS. Desarrollado con React, TypeScript, postgres, Postman y Docker starter repository.
 
 ## Docker
 ```bash
