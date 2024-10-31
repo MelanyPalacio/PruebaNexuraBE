@@ -5,6 +5,7 @@ import {
   ManyToOne,
   JoinColumn,
   ManyToMany,
+  JoinTable,
 } from 'typeorm';
 import { Area } from './area.entity';
 import { Rol } from './rol.entity';
@@ -36,6 +37,19 @@ export class Empleado {
   @JoinColumn({ name: 'area_id' })
   area: Area;
 
-  @ManyToMany(() => Rol, (rol) => rol.empleados)
+  @ManyToMany(() => Rol, (rol) => rol.empleados, {
+    onDelete: 'CASCADE'
+  })
+  @JoinTable({
+    name: 'empleado_rol',
+    joinColumn: {
+      name: 'empleado_id',
+      referencedColumnName: 'id'
+    },
+    inverseJoinColumn: {
+      name: 'rol_id',
+      referencedColumnName: 'id'
+    },
+  })
   roles: Rol[];
 }
