@@ -2,8 +2,11 @@
 
 Prueba Nexura - CRUD EMPLEADOS. Desarrollado con React, TypeScript, Postman y Docker starter repository.
 
-## Copilar e iniciar
-
+## Docker
+```bash
+$ docker-compose up --build -d
+```
+## Inicar proyecto
 ```bash
 # development
 $ npm run start
@@ -12,10 +15,12 @@ $ npm run start
 $ npm run start:dev
 ```
 
+## Endpoins testing
 
-## Docker
-```bash
-$ docker-compose up --build -d
+![Imagen de endpoin funcionando](img/CrearEmpleado.png)
 
-```
+![Imagen de endpoin funcionando](img/TodosEmpleados.png)
+
+
+
 
