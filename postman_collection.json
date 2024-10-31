@@ -1,0 +1,280 @@
+{
+  "info": {
+    "name": "NestJS API",
+    "_postman_id": "12345",
+    "description": "API for testing Empleado, Area, and Rol endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Empleados",
+      "item": [
+        {
+          "name": "Create Empleado",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"John Doe\",\"email\":\"john@example.com\",\"sexo\":\"M\",\"area_id\":1,\"boletin\":0,\"descripcion\":\"A sample employee\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/empleados",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["empleados"]
+            }
+          }
+        },
+        {
+          "name": "Get All Empleados",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/empleados",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["empleados"]
+            }
+          }
+        },
+        {
+          "name": "Get Empleado by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/empleados/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["empleados", "1"]
+            }
+          }
+        },
+        {
+          "name": "Update Empleado",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"John Doe Updated\",\"email\":\"john.updated@example.com\",\"sexo\":\"M\",\"area_id\":1,\"boletin\":0,\"descripcion\":\"An updated employee\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/empleados/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["empleados", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Empleado",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/empleados/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["empleados", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Areas",
+      "item": [
+        {
+          "name": "Create Area",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"IT\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/areas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["areas"]
+            }
+          }
+        },
+        {
+          "name": "Get All Areas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/areas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["areas"]
+            }
+          }
+        },
+        {
+          "name": "Get Area by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/areas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["areas", "1"]
+            }
+          }
+        },
+        {
+          "name": "Update Area",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"IT Department\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/areas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["areas", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Area",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/areas/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["areas", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Roles",
+      "item": [
+        {
+          "name": "Create Rol",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"Admin\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/roles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["roles"]
+            }
+          }
+        },
+        {
+          "name": "Get All Roles",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/roles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["roles"]
+            }
+          }
+        },
+        {
+          "name": "Get Rol by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/roles/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["roles", "1"]
+            }
+          }
+        },
+        {
+          "name": "Update Rol",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\":\"Administrator\"}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/roles/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["roles", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Rol",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/roles/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["roles", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
